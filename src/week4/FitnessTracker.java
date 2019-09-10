@@ -9,12 +9,22 @@ public class FitnessTracker {
     private int day;
     private int[] date;
 
-    public FitnessTracker() {
-        fitnessActivity = "running";
-        participationTime = 0;
-        year = 2019;
-        month = 1;
-        day = 1;
+    public FitnessTracker(String activity, int time, int yr, int mth, int d) {
+        setFitnessActivity(activity);
+        fitnessActivity = getFitnessActivity();
+
+        setParticipationTime(time);
+        participationTime = getParticipationTime();
+
+        setYear(yr);
+        year = getYear();
+
+        setMonth(mth);
+        month = getMonth();
+
+        setDay(d);
+        day = getDay();
+
         date = new int[]{year, month, day};
 
     }
